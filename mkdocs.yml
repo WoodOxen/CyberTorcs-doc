@@ -1,0 +1,14 @@
+site_name: SJTU-AU203
+repo_url: https://github.com/SCP-CN-001/SJTU-AU203
+docs_dir: docs
+extra_css: [extra.css]
+extra_javascript: [extra.js]
+theme: readthedocs
+nav:
+- 主页: 'index.md'
+- CyberTORCS平台介绍: 'about.md'
+- 安装说明: 'installation.md'
+- 编程方法介绍:
+    - 程序编写接口: 'intro_api.md'
+    - 车体控制变量: 'intro_variables.md'
+- 常见问题: "faq.md"
