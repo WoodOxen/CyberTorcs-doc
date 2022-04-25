@@ -1,7 +1,7 @@
 site_name: SJTU-AU203
 repo_url: https://github.com/SCP-CN-001/SJTU-AU203
 docs_dir: docs
-edit_uri: 'edit/master/docs/'
+edit_uri: 'blob/master/docs/'
 extra_css: [extra.css]
 extra_javascript: [extra.js]
 theme: readthedocs
