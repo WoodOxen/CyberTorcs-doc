@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    if(window.location.href.indexOf("/latest/") != -1) {
+    if(window.location.href.indexOf("/dev/") != -1) {
         var banner = document.createElement("div");
         var section = document.getElementsByClassName("section");
         banner.className = "dev-version-warning";
