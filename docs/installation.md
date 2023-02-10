@@ -5,7 +5,7 @@
 ### 操作系统
 
 - windows系统：windows 10, windows 11
-- linux系统：ubuntu 18.04, ubuntu 20.04 (TODO)
+- linux系统：ubuntu 18.04
 
 ### 硬件要求
 
