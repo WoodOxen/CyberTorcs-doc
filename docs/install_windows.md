@@ -1,22 +1,31 @@
-# Windows系统
+# Windows
+
+本页面提供了在Windows操作系统下逐步安装Torcs的操作教程。
 
 ## 安装要求
 
-### 操作系统
+### Windows版本
 
-- windows系统：windows 10, windows 11
-- linux系统：ubuntu 18.04
+
 
 ### 硬件要求
 
-- CPU最低频率: 800MHz
-- 最小内存: 256MB
-- 磁盘空间: >1G
-- 最小显存: 64MB RAM
+- CPU最低频率：800MHz
+- 最小内存：256MB
+- 最小显存：64MB
+- 磁盘空间：>1G
 
-### 软件要求
+### 依赖库
 
-TODO
+OpenGL 1.3
+
+### 开发环境（推荐）
+
+- 代码编译器：[Visual Studio](https://visualstudio.microsoft.com/)（版本：2010/2012/2013/2017/2019）
+- 代码编辑器：[Visual Studio Code](https://code.visualstudio.com/)
+
+相关资料：[什么是编辑器和编译器，什么是集成开发环境？编译原理又是什么？](https://zhuanlan.zhihu.com/p/126164350)
+
 
 ## 安装
 

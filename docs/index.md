@@ -2,15 +2,7 @@
 
 欢迎来到CyberTorcs的官方网站。
 
-CyberTorcs 是基于赛车游戏Torcs (The Open Racing Car Simulator) 开发的驾驶仿真器，提供了在
+CyberTorcs 是由上海交通大学智能车实验室基于赛车游戏Torcs (The Open Racing Car Simulator) 开发的仿真平台，主要用于辅助控制理论学科的教学和研究工作。
 
-## TORCS基本信息
-
-- 全称：The Open Racing Car Simulator
-- 平台：Linux, FreeBSD, MacOSXand Windows
-- 作者：Eric Espié、 Christophe Guionneau
-- 历史：1997 –至今
-- 性质：GNU开源软件
-- 网址：[TORCS](www.torcs.org)
-- 下载：> 1,000,000
+> [Torcs](www.torcs.org)是1997年开始开发的赛车游戏，支持Linux, FreeBSD, MacOSX, Windows多平台使用，主要开发人是Eric Espié和Christophe Guionneau。其中包含了丰富的车辆和赛车赛道模型。
 

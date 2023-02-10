@@ -13,9 +13,10 @@ nav:
   - 安装:
     - Windows: 'install_windows.md'
     - Linux: 'install_linux.md'
+  - 平台简介:
+    - 软件设置: 'intro_settings.md'
   - 接口:
-    - 程序编写接口: 'intro_api.md'
-    - 车体控制变量: 'intro_variables.md'
+    - 输入写接口: 'api_input.md'
   - 样例代码:
     - 巡线任务: 'sample_follow.md'
   - 常见问题: "faq.md"
