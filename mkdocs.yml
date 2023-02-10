@@ -1,18 +1,26 @@
-site_name: CyberTorcs-doc
-repo_url: https://github.com/WoodOxen/CyberTorcs-doc
-docs_dir: docs
-edit_uri: 'blob/master/docs/'
-# extra_css: [extra.css]
-# extra_javascript: [extra.js]
-theme: readthedocs
+# Check https://markdown-docs-zh.readthedocs.io/zh_CN/latest/user-guide/configuration/
+# for more MkDocs configuration details
 
+site_name: CyberTorcs-doc
+site_url: https://cybertorcs.readthedocs.io/zh_CN/latest/
+site_description: CyberTorcs软件的官方网站
+site_author: CyberC3 Intelligent Vehicle Labs
+repo_url: https://github.com/WoodOxen/CyberTorcs-doc
+
+docs_dir: docs
 nav:
-- 主页: 'index.md'
-- 安装说明: 'installation.md'
-- 编程方法介绍:
+  - 主页: 'index.md'
+  - 安装:
+    - Windows: 'install_windows.md'
+    - Linux: 'install_linux.md'
+  - 接口:
     - 程序编写接口: 'intro_api.md'
     - 车体控制变量: 'intro_variables.md'
-- 常见问题: "faq.md"
+  - 样例代码:
+    - 巡线任务: 'sample_follow.md'
+  - 常见问题: "faq.md"
+
+theme: readthedocs
 
 markdown_extensions:
   - admonition
