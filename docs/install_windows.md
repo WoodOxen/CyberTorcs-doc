@@ -29,10 +29,6 @@ OpenGL 1.3
 
 ## 安装
 
-### 方法1
-
-### 方法2
-
-### 方法3
+下载压缩包`CyberTorcs_[version].rar`至本地硬盘，解压后，直接运行 wtorcs.exe即可。
 
 ## 使用
