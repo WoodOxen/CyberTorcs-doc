@@ -34,11 +34,13 @@ wheel rendering————轮渲染
 可以调整屏幕分辨率，颜色深度和显示模式（窗口或全屏）等参数，然后应用所作的修改
 
 ### "Sound"菜单——声音调节
+
 ![Sound!](imgs/intro_settings/sound.png)
 
 可以开关声音效果及菜单音乐
 
 ## "Race"菜单介绍
+
 ![Race!](imgs/intro_settings/race.png)
 菜单中有四个选项：
 
@@ -51,9 +53,13 @@ CyberOnHand——手动控制
 
 以 CyberCruise 为例，点击后出现两个菜单
 ![Cruise!](imgs/intro_settings/cyber_cruise.png)
+
 ### "Configure Race"菜单——选择赛道
+
 ![ConfigureRace!](imgs/intro_settings/configure_race.png)
+
 ### "New Race" 菜单——进入自动巡线程序
+
 ![NewRace!](imgs/intro_settings/new_race.png)
 
 F1 为帮助键，按下后是快捷键的说明（包括切换视角、隐藏/显示面板等）
