@@ -23,10 +23,7 @@ nav:
     - 泊车任务: 'sample_parking.md'
   - 常见问题: "faq.md"
 
-theme:
-  name: 'material'
-  
+theme: 'readthedocs'
 
 markdown_extensions:
   - admonition
-  - pymdownx.details
