@@ -13,7 +13,7 @@ nav:
   - 安装: 'install.md'
   - 简介:
     - 平台结构: 'intro_structure.md'
-    - 平台界面: 'intro_settings.md'
+    - 设置菜单介绍: 'intro_settings.md'
   - 接口:
     - 输入接口: 'api_input.md'
   - 样例代码:
@@ -24,14 +24,9 @@ nav:
   - 常见问题: "faq.md"
 
 theme:
-  name: readthedocs
-  custom_dir: theme
+  name: 'material'
+  
 
 markdown_extensions:
   - admonition
-  - pymdownx.arithmatex
-  - pymdownx.betterem
-  - pymdownx.caret
-  - pymdownx.mark
-  - pymdownx.tilde
   - pymdownx.details
