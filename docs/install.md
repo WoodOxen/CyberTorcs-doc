@@ -59,8 +59,8 @@ OpenGL 1.3
 3. 打开后确认编译方式为 **Release**，然后点击 **本地 Windows 调试器** 编译；
   ![编译](imgs/install/compile.png)
 4. 若是成功编译，则显示如下图：命令行中提示“成功 1 个”。虽然会弹出窗口警告，但这是因为我们生成的是 dll 文件，而不是可执行文件，因此系统无法直接执行编译生成的结果。
-  ![编译结果](imgs/install/compile_result.png)
   > 初次打开项目文件编译时可能会出现编译失败，命令行中提示“重定目标”的报错信息，按命令行给出的操作方法处理即可。
+  ![编译结果](imgs/install/compile_result.png)
 6. 编译完成后，项目路径下的 Release 文件夹中新生成了 dll 文件
   ![生成dll](imgs/install/generate_dll.png)
 7. 将新生成的 dll 文件复制到 Torcs 文件夹下的 cybercruise 文件夹中，替换旧的 dll 文件
