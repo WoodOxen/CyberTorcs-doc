@@ -10,9 +10,7 @@ repo_url: https://github.com/WoodOxen/CyberTorcs-doc
 docs_dir: docs
 nav:
   - 主页: 'index.md'
-  - 安装:
-    - Windows: 'install_windows.md'
-    - Linux: 'install_linux.md'
+  - 安装: 'install.md'
   - 简介:
     - 平台结构: 'intro_structure.md'
     - 平台界面: 'intro_settings.md'
@@ -25,7 +23,9 @@ nav:
     - 泊车任务: 'sample_parking.md'
   - 常见问题: "faq.md"
 
-theme: readthedocs
+theme:
+  name: readthedocs
+  custom_dir: theme
 
 markdown_extensions:
   - admonition
