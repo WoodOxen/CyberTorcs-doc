@@ -29,3 +29,9 @@ theme:
 
 markdown_extensions:
   - admonition
+  - pymdownx.arithmatex
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.details
