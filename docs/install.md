@@ -26,7 +26,16 @@
 
 ### 软件安装
 
-下载课程网站提供的软件压缩包，解压至电脑即可。
+1. 下载课程网站提供的软件压缩包，解压至电脑即可。
+
+2. 本软件需要搭配电子加密狗使用，初次运行软件前需要修改Windows安全设置。具体操作方法如下：
+
+    控制面板->更新与安全->Windows安全中心->病毒和威胁防护->管理设置->添加或删除排除项，将解压缩后的文件夹加入。
+![windows_security_1](imgs/install/windows_security_1.png)
+![windows_security_2](imgs/install/windows_security_2.png)
+![windows_security_3](imgs/install/windows_security_3.png)
+
+
 
 ## 快速开始
 
