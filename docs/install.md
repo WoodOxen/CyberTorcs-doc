@@ -69,3 +69,33 @@
 
 !!! tip 初次编译失败
     初次打开项目文件编译时可能会出现编译失败，命令行中提示 *重定目标* 的报错信息，按命令行给出的操作方法处理即可。
+
+### 安装可视化工具
+
+兼容性说明：
+![兼容性说明](imgs/install/visualtool_intro.png)
+
+1. 下载并解压可视化插件相关工具到电脑
+2. 在vs中配置头文件目录和库文件目录
+
+- 打开属性设置
+![打开路径](imgs/install/sln_property.png)
+- 配置include路径
+![编辑include路径](imgs/install/include_path_step1.png)
+![新增include路径](imgs/install/include_path_step2.png)
+![选择include路径](imgs/install/include_path_step3.png)
+![确定include路径](imgs/install/include_path_step4.png)
+
+- 配置库文件路径
+![编辑库文件路径](imgs/install/lib_path_step1.png)
+![新增库文件路径](imgs/install/lib_path_step2.png)
+![选择库文件路径](imgs/install/lib_path_step3.png)
+![确定库文件路径](imgs/install/lib_path_step4.png)
+
+3. 在vs中确认其他配置
+![sln设置1](imgs/install/sln_settings1.png)
+![sln设置2](imgs/install/sln_settings2.png)
+![sln设置3](imgs/install/sln_settings3.png)
+
+4. 将可视化插件中的dll文件移动到torcs.exe文件的目录下
+![移动dll](imgs/install/move_dll_to_exe.png)
