@@ -18,7 +18,7 @@
         - [Visual Studio](https://visualstudio.microsoft.com/)（版本：2010/2012/2013/2017/2019）
         - [CLion](https://www.jetbrains.com/clion/)
 
-- 代码编辑器：[Visual Studio Code](https://code.visualstudio.com/)
+    - 代码编辑器：[Visual Studio Code](https://code.visualstudio.com/)
 
 相关资料：[什么是编辑器和编译器，什么是集成开发环境？编译原理又是什么？](https://zhuanlan.zhihu.com/p/126164350)
 
@@ -41,8 +41,12 @@
 
 ### 安装 Visual Studio 集成开发环境
 
-1. 在[交大云盘](https://jbox.sjtu.edu.cn/v/list/ent/936369142)下载 VisualStudio 的安装引导文件
-    ![下载 Visual Studio 的安装引导文件](imgs/install/vs_download.png)
+!!! info "兼容性说明"
+    CyberTorcs基于开源计算机视觉库 [OpenCV](https://docs.opencv.org/4.x/) 开发，由于开发时间较早，采用的是Win32的开发环境。由于OpenCV 高度依赖于C++语言编译器版本（以下将简称Visual Studio中C++语言编译器为VC编译器），而 OpenCv 官方团队从 Visual Studio 2015 (VC14) 开始不再支持 Win32，因此，如何在Visual Studio 2019 上兼容只在 Win32 模式下运行的 CyberTORCS，就成了平台兼容性最大的挑战。
+    
+    目前该问题已通过在 Win32 模式下使用 Visual Studio 2019对 OpenCV进行源码编译解决。这个内测版本仅在 Visual Studio 2019 (VC16) 下可以使用。因此，最推荐的开发环境搭配为 Visual Studio 2019 + VC16 编译器。
+
+1. 通过[Visual Studio官网](https://visualstudio.microsoft.com/vs/older-downloads/)或[交大云盘](https://jbox.sjtu.edu.cn/v/list/ent/936369142)下载 VisualStudio 的安装引导文件；
 2. 双击打开 VisualStudio 安装引导文件，选择需要安装的开发工具，这里选择 **使用 C++的桌面开发**，然后安装。
     ![安装 Visual Studio!](imgs/install/vs_install.png)
 
@@ -58,44 +62,39 @@
 2. 选择工程文件`driver_cruise.sln`，右键选择通过 Visual Studio 打开；
 3. 打开后确认编译方式为 **Release**，然后点击 **本地 Windows 调试器** 编译；
     ![编译](imgs/install/compile.png)
-4. 成功编译时，命令行会提示 *成功1个……*。 
-   弹出窗口警告提示 *无法启动程序* 是因为生成的是 dll 文件，而不是可执行文件，系统无法直接执行编译生成的结果，该警告不会影响编译结果；
+4. 成功编译时，命令行会提示 *成功1个……*。如果弹出窗口警告提示 *无法启动程序* ，是因为生成的是 dll 文件，而不是可执行文件，系统无法直接执行编译生成的结果，该警告不会影响编译结果；
     ![编译结果](imgs/install/compile_result.png)
-5. 编译完成后，`./Release/`中新生成了 dll 文件；
+5. 编译完成后，`./Release/`中会新生成 `.dll` 文件；
     ![生成dll](imgs/install/generate_dll.png)
-6. 将新生成的 dll 文件复制到 Torcs 文件夹下的 cybercruise 文件夹中，替换旧的 dll 文件；
+6. 将新生成的 `.dll` 文件复制到 Torcs 文件夹下的 cybercruise 文件夹中，替换旧的 `.dll` 文件；
     ![发布dll](imgs/install/release_dll.png)
 7. 
 
-!!! tip 初次编译失败
+!!! tip "常见问题：初次编译失败"
     初次打开项目文件编译时可能会出现编译失败，命令行中提示 *重定目标* 的报错信息，按命令行给出的操作方法处理即可。
 
 ### 安装可视化工具
 
-兼容性说明：
-![兼容性说明](imgs/install/visualtool_intro.png)
-
 1. 下载并解压可视化插件相关工具到电脑
-2. 在vs中配置头文件目录和库文件目录
+2. 在Visual Studio中配置头文件目录和库文件目录
+    
+    a.  打开属性设置配置include路径
+        ![打开路径](imgs/install/sln_property.png)
+        ![编辑include路径](imgs/install/include_path_step1.png)
+        ![新增include路径](imgs/install/include_path_step2.png)
+        ![选择include路径](imgs/install/include_path_step3.png)
+        ![确定include路径](imgs/install/include_path_step4.png)
 
-- 打开属性设置
-![打开路径](imgs/install/sln_property.png)
-- 配置include路径
-![编辑include路径](imgs/install/include_path_step1.png)
-![新增include路径](imgs/install/include_path_step2.png)
-![选择include路径](imgs/install/include_path_step3.png)
-![确定include路径](imgs/install/include_path_step4.png)
-
-- 配置库文件路径
-![编辑库文件路径](imgs/install/lib_path_step1.png)
-![新增库文件路径](imgs/install/lib_path_step2.png)
-![选择库文件路径](imgs/install/lib_path_step3.png)
-![确定库文件路径](imgs/install/lib_path_step4.png)
+    b. 配置库文件路径
+        ![编辑库文件路径](imgs/install/lib_path_step1.png)
+        ![新增库文件路径](imgs/install/lib_path_step2.png)
+        ![选择库文件路径](imgs/install/lib_path_step3.png)
+        ![确定库文件路径](imgs/install/lib_path_step4.png)
 
 3. 在vs中确认其他配置
-![sln设置1](imgs/install/sln_settings1.png)
-![sln设置2](imgs/install/sln_settings2.png)
-![sln设置3](imgs/install/sln_settings3.png)
+    ![sln设置1](imgs/install/sln_settings1.png)
+    ![sln设置2](imgs/install/sln_settings2.png)
+    ![sln设置3](imgs/install/sln_settings3.png)
 
-4. 将可视化插件中的dll文件移动到torcs.exe文件的目录下
-![移动dll](imgs/install/move_dll_to_exe.png)
+4. 将可视化插件中的 `.dll` 文件移动到 `torcs.exe` 文件的目录下
+    ![移动dll](imgs/install/move_dll_to_exe.png)
