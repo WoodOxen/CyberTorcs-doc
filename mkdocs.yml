@@ -14,6 +14,9 @@ nav:
       - 平台结构: "intro_structure.md"
       - 设置菜单介绍: "intro_settings.md"
   - 安装: "install.md"
+  - 原理介绍:
+      - 车辆动力学模型: "mechanism_car_model.md"
+      - PID控制: "mechanism_pid.md"
   - 接口:
       - 输入接口: "api_input.md"
   - 样例代码:
