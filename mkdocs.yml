@@ -12,19 +12,19 @@ docs_dir: docs
 nav:
   - 主页: "index.md"
   - 简介:
-      - 平台结构: "intro_structure.md"
-      - 设置菜单介绍: "intro_settings.md"
+    - 平台结构: "intro_structure.md"
+    - 设置菜单介绍: "intro_settings.md"
   - 安装: "install.md"
   - 原理介绍:
-      - 车辆动力学模型: "mechanism_car_model.md"
-      - PID控制算法: "mechanism_pid.md"
+    - 车辆动力学模型: "mechanism_car_model.md"
+    - PID控制: "mechanism_pid.md"
   - 任务介绍:
     - 巡线任务: "task_patrolling.md"
     - 跟车任务: "task_following.md"
     - 泊车任务: "task_parking.md"
   - 样例代码:
-      - PID控制: "sample_PID.md"
-      - Stanley: "sample_stanley.md"
+    - 基于PID控制的车辆控制: "sample_PID.md"
+    - Stanley: "sample_stanley.md"
   - 常见问题: "faq.md"
 
 theme: "readthedocs"
@@ -32,3 +32,7 @@ theme: "readthedocs"
 markdown_extensions:
   - admonition
   - pymdownx.arithmatex
+extra_javascript:
+  - javascripts/mathjax-config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg-full.js
