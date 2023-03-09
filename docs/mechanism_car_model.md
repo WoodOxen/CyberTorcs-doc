@@ -5,7 +5,8 @@
 [车辆运动学模型到动力学模型推导](https://zhuanlan.zhihu.com/p/493037015)
 
 ```cpp
-// 车辆物理状态的更新顺序
+/* 车辆物理状态的更新顺序 */
+
 void
 SimCarUpdate(tCar *car, tSituation * /* s */)
 {

@@ -8,6 +8,7 @@ site_author: CyberC3 Intelligent Vehicle Labs
 repo_url: https://github.com/WoodOxen/CyberTorcs-doc
 
 docs_dir: docs
+
 nav:
   - 主页: "index.md"
   - 简介:
@@ -17,10 +18,9 @@ nav:
   - 原理介绍:
       - 车辆动力学模型: "mechanism_car_model.md"
       - PID控制算法: "mechanism_pid.md"
-  - 接口:
-    - 输入接口: "api_input.md"
   - 任务介绍:
     - 巡线任务: "task_patrolling.md"
+    - 跟车任务: "task_following.md"
     - 泊车任务: "task_parking.md"
   - 样例代码:
       - PID控制: "sample_PID.md"
@@ -31,3 +31,4 @@ theme: "readthedocs"
 
 markdown_extensions:
   - admonition
+  - pymdownx.arithmatex
