@@ -4,24 +4,30 @@
 
 在CyberTorcs中，巡线任务被定义为让自控车辆沿着道路中线前进的任务，主要用于测试控制算法的精度和稳定性。
 
-在具体实验过程中，一般会随机选取5～6条赛道，要求编写一套算法，能让自控车辆沿着赛道跑完全程，并记录运行过程中的一些物理量的数值，作为量化评价算法效果的依据。
+在具体实验过程中，一般会随机选取5～6条赛道，要求编写一套算法，能让自控车辆沿着赛道跑完全程，并记录运行过程中的一些物理量的数值，作为量化评价算法效果的指标。
+
+![预瞄点计算示意图](./imgs/tasks/target_point.png)
 
 ## 评价规则
 
 CyberTorcs在评价模型的巡线表现时，使用了以下定量表达式：
 
 - **速度**：使用单圈完成时间和碰撞损失之和表示
-  
-    $Total_T = Time + Damage / 10$
-
-- **精度**：用车体偏离道路中线的偏差表示，在时间纬度上进行累积，为了去除距离的量纲除以了车长
-
-    $Total_E = Error / CarLength$
-
-**总评分**为 $Total_T&E$，速度指标除以4是经验值。
 
 $$
-Total_T&E = (Time + Damage / 10) / 4 + Error / CarLength
+\textrm{Total_T} = \textrm{Time} + \textrm{Damage} / 10
+$$
+
+- **精度**：用车体偏离道路中线的偏差表示，在时间纬度上进行累积，为了去除距离的量纲除以车长
+
+$$
+\textrm{Total_E} = \textrm{Error} / \textrm{CarLength}
+$$
+
+**总评分** $\textrm{Total_T&E}$为上述两个指标的加权求和，速度指标除以4是经验值。
+
+$$
+\textrm{Total_T&E} = \textrm{Total_T} / 4 + \textrm{Total_E}
 $$
 
 ```cpp
@@ -29,11 +35,12 @@ $$
 
 float error = 0;
 
-double if_to_middle = sqrt(midline[0][0] * midline[0][0] + midline[0][1] * midline[0][1]);
+double midlineError = \
+    sqrt(midline[0][0] * midline[0][0] + midline[0][1] * midline[0][1]);
 
-error += abs(if_to_middle) + \
-    abs((abs((car_length / 2.0) * tan(yaw)) + (car_width / 2.0)) / cos(yaw)) - \
-    (car_width / 2.0);
+error += abs(midlineError) + \
+    abs((abs((carLength / 2.0) * tan(yaw)) + (carWidth / 2.0)) / cos(yaw)) - \
+    (carWidth / 2.0);
 ```
 
 ## 接口定义
@@ -43,15 +50,13 @@ error += abs(if_to_middle) + \
 | 变量 | 说明 |
 | ----- | ----- |
 | `float midline[k][2]` | **预瞄点**，沿道路中线 *k* 米处的相对于当前车辆坐标系的坐标值。<br>例如，(`midline[10][0]`, `midline[10][1]`) <br>表示沿道路中线前方10米处的点相对于当前车辆坐标系的 *(x,y)* 坐标， <br>考虑到实际感知技术的极限，目前设定 *k <= 200*。 |
-| `float yaw` | **偏航角（弧度）**，指车头朝向与道路中心线在 车辆中心到中心线垂足点位置 的切线的夹角。 |
+| `float yaw` | **偏航角（弧度）**，指车头朝向与车辆中心到道路中心线最近点的切线的夹角。 |
 | `float yawrate` | **角速度（弧度/秒）** |
 | `float speed` | **车速（公里/小时）** |
 | `float acc` | **加速度（米/秒<sup>2</sup>）** |
 | `float width` | **道路宽度（米）** |
 | `float gearbox` | **档位**，选项 {0, 1, 2, 3, 4, 5, 6}，0为空挡。 |
 | `float rpm` | **发动机转速（转/分钟）** |
-
-![预瞄点计算示意图](./imgs/tasks/target_point.png)
 
 ### 控制模型的输出变量
 
