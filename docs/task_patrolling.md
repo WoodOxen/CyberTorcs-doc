@@ -4,24 +4,28 @@
 
 在CyberTorcs中，巡线任务被定义为让自控车辆沿着道路中线前进的任务，主要用于测试控制算法的精度和稳定性。
 
-在具体实验过程中，一般会随机选取5～6条赛道，要求编写一套算法，能让自控车辆沿着赛道跑完全程，并记录运行过程中的一些物理量的数值，作为量化评价算法效果的依据。
+在具体实验过程中，一般会随机选取5～6条赛道，要求编写一套算法，能让自控车辆沿着赛道跑完全程，并记录运行过程中的一些物理量的数值，作为量化评价算法效果的指标。
 
 ## 评价规则
 
 CyberTorcs在评价模型的巡线表现时，使用了以下定量表达式：
 
 - **速度**：使用单圈完成时间和碰撞损失之和表示
-  
-    $Total_T = Time + Damage / 10$
-
-- **精度**：用车体偏离道路中线的偏差表示，在时间纬度上进行累积，为了去除距离的量纲除以了车长
-
-    $Total_E = Error / CarLength$
-
-**总评分**为 $Total_T&E$，速度指标除以4是经验值。
 
 $$
-Total_T&E = (Time + Damage / 10) / 4 + Error / CarLength
+\textrm{Total_T} = \textrm{Time} + \textrm{Damage} / 10
+$$
+
+- **精度**：用车体偏离道路中线的偏差表示，在时间纬度上进行累积，为了去除距离的量纲除以车长
+
+$$
+\textrm{Total_E} = \textrm{Error} / \textrm{CarLength}
+$$
+
+**总评分** $\textrm{Total_T&E}$为上述两个指标的加权求和，速度指标除以4是经验值。
+
+$$
+\textrm{Total_T&E} = \textrm{Total_T} / 4 + \textrm{Total_E}
 $$
 
 ```cpp
@@ -29,11 +33,12 @@ $$
 
 float error = 0;
 
-double if_to_middle = sqrt(midline[0][0] * midline[0][0] + midline[0][1] * midline[0][1]);
+double midlineError = \
+    sqrt(midline[0][0] * midline[0][0] + midline[0][1] * midline[0][1]);
 
-error += abs(if_to_middle) + \
-    abs((abs((car_length / 2.0) * tan(yaw)) + (car_width / 2.0)) / cos(yaw)) - \
-    (car_width / 2.0);
+error += abs(midlineError) + \
+    abs((abs((carLength / 2.0) * tan(yaw)) + (carWidth / 2.0)) / cos(yaw)) - \
+    (carWidth / 2.0);
 ```
 
 ## 接口定义
