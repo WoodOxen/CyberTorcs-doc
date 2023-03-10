@@ -41,6 +41,8 @@ error += abs(midlineError) + \
     (carWidth / 2.0);
 ```
 
+![预瞄点计算示意图](./imgs/tasks/target_point.png)
+
 ## 接口定义
 
 ### 控制模型的输入变量
@@ -55,8 +57,6 @@ error += abs(midlineError) + \
 | `float width` | **道路宽度（米）** |
 | `float gearbox` | **档位**，选项 {0, 1, 2, 3, 4, 5, 6}，0为空挡。 |
 | `float rpm` | **发动机转速（转/分钟）** |
-
-![预瞄点计算示意图](./imgs/tasks/target_point.png)
 
 ### 控制模型的输出变量
 
