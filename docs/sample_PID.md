@@ -1,4 +1,4 @@
-# 基于PID控制的车辆控制integratedError
+# 基于PID的车辆控制integratedError
 
 ## PID控制器
 

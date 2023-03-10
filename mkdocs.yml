@@ -23,8 +23,8 @@ nav:
     - 跟车任务: "task_following.md"
     - 泊车任务: "task_parking.md"
   - 样例代码:
-    - 基于PID控制的车辆控制: "sample_PID.md"
-    - Stanley: "sample_stanley.md"
+    - 基于PID的车辆控制: "sample_PID.md"
+    - 基于Stanley的车辆角度控制: "sample_stanley.md"
   - 常见问题: "faq.md"
 
 theme: "readthedocs"
