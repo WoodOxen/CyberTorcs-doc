@@ -17,7 +17,7 @@ nav:
   - 安装: "install.md"
   - 原理介绍:
     - 车辆物理模型: "mechanism_car_model.md"
-    - PID控制器: "mechanism_pid.md"
+    - PID控制器: "mechanism_PID.md"
   - 任务介绍:
     - 巡线任务: "task_patrolling.md"
     - 跟车任务: "task_following.md"
