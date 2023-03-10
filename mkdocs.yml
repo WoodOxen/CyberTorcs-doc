@@ -16,8 +16,8 @@ nav:
     - 设置菜单介绍: "intro_settings.md"
   - 安装: "install.md"
   - 原理介绍:
-    - 车辆动力学模型: "mechanism_car_model.md"
-    - PID控制: "mechanism_pid.md"
+    - 车辆物理模型: "mechanism_car_model.md"
+    - PID控制器: "mechanism_pid.md"
   - 任务介绍:
     - 巡线任务: "task_patrolling.md"
     - 跟车任务: "task_following.md"

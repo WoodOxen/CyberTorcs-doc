@@ -1,17 +1,15 @@
 # 基于PID控制的车辆控制
 
+## PID控制器
+
 ```cpp
-/*▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*\
-█    PID控制器，由ChatGPT生成                                                █
-█    可选择性修改，需要完全理解                                                █
-\*▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
 class PIDController
 {
 private:
-    double kp, ki, kd;        // PID控制器的参数
-    double targetValue;        // 目标值
-    double lastError;        // 上一次误差值
-    double errorIntegral;    // 误差积分值
+    double kp, ki, kd;      // PID控制器的参数
+    double targetValue;     // 目标值
+    double lastError;       // 上一次误差值
+    double errorIntegral;   // 误差积分值
 
 public:    
     void initial(double p, double i, double d, double target)
@@ -33,11 +31,11 @@ public:
         return kp * error + ki * errorIntegral + kd * derivative;
     }
 };
+```
 
-/*▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*\
-█    车辆控制主程序，由ChatGPT自动生成助教完善                                █
-█    样例代码仅供参考，请在下方设计实现您的算法                                █
-\*▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+## 基于PID的车辆控制
+
+```cpp
 PIDController speedController;    //速度PID控制
 PIDController angleController;    //舵角PID控制
 double lastTargetSpeed = 999.0;    //上一帧目标速度

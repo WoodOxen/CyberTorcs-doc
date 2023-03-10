@@ -29,9 +29,9 @@ $$
 
 float error = 0;
 
-double if_to_middle = sqrt(midline[0][0] * midline[0][0] + midline[0][1] * midline[0][1]);
+double error_midline = sqrt(midline[0][0] * midline[0][0] + midline[0][1] * midline[0][1]);
 
-error += abs(if_to_middle) + \
+error += abs(error_midline) + \
     abs((abs((car_length / 2.0) * tan(yaw)) + (car_width / 2.0)) / cos(yaw)) - \
     (car_width / 2.0);
 ```
