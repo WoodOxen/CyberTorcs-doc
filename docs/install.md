@@ -52,7 +52,7 @@
 
 ### 运行软件
 
-打开解压缩后得到的文件夹 CyberTorcs，直接运行 `wtorcs.exe` 。具体软件界面介绍请参考[简介-设置菜单介绍](https://cybertorcs.readthedocs.io/zh_CN/latest/intro_settings/)。
+打开解压缩后得到的文件夹 CyberTorcs，进入runtime文件夹，直接运行 `wtorcs.exe` 。具体软件界面介绍请参考[简介-设置菜单介绍](https://cybertorcs.readthedocs.io/zh_CN/latest/intro_settings/)。
 
 ### 编程步骤
 
