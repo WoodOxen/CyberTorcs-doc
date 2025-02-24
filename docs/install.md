@@ -26,7 +26,7 @@
 
 ### 软件安装
 
-1. 下载课程网站提供的软件压缩包，解压至电脑即可。
+1. 下载canvas网站上提供的软件压缩包CyberTorcs_2025_v1.zip，解压至电脑。
 
 2. 本软件需要搭配电子加密狗使用，初次运行软件前需要修改Windows安全设置。具体操作方法如下：
 
@@ -59,16 +59,14 @@
 以下以巡线任务为例，说明如何在CyberTorcs中使用自己编程的代码控制车辆运行。
 
 1. 下载课程网站提供的模板代码压缩包并解压。
-2. 选择工程文件`driver_cruise.sln`，右键选择通过 Visual Studio 打开；
-3. 打开后确认编译方式为 **Release**，然后点击 **本地 Windows 调试器** 编译；
-    ![编译](imgs/install/compile.png)
+2. 打开“学生端开发”文件夹，选择工程文件`student.sln`，右键选择通过 Visual Studio 打开；
+3. 打开后确认编译方式为 **Release**，然后右键点击“driver_cruise”，点击”生成“进行编译；
+    ![编译](imgs/install/compile_new.png)
 4. 成功编译时，命令行会提示 *成功1个……*。如果弹出窗口警告提示 *无法启动程序* ，是因为生成的是 dll 文件，而不是可执行文件，系统无法直接执行编译生成的结果，该警告不会影响编译结果；
     ![编译结果](imgs/install/compile_result.png)
-5. 编译完成后，`./Release/`中会新生成 `.dll` 文件；
-    ![生成dll](imgs/install/generate_dll.png)
-6. 将新生成的 `.dll` 文件复制到 Torcs 文件夹下的 cybercruise 文件夹中，替换旧的 `.dll` 文件；
-    ![发布dll](imgs/install/release_dll.png)
-7. 
+5. 编译完成后，新生成的 `.dll` 文件会自动出现在 CyberTorcs/runtime 文件夹下的 cybercruise 文件夹中；
+6. 运行 `wtorcs.exe`,即可用自己的程序在CyberTorcs中控制车辆运行。
+
 
 !!! tip "常见问题：初次编译失败"
     初次打开项目文件编译时可能会出现编译失败，命令行中提示 *重定目标* 的报错信息，按命令行给出的操作方法处理即可。
